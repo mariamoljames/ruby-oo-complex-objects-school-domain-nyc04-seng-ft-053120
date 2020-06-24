@@ -7,7 +7,8 @@ class School
     @roster={}
   end
   def add_student(student,grade)
-    @school[:grade]=[]
+    if @roster[grade]!=nil
+    @roster[grade]<<student
     @school[:grade]<<student
   end
   def grade(grade)
